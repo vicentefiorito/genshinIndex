@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 
 export default function CharacterList({ res }) {
-  console.log(res[5]);
+    //console.log(res);
   if (res.length > 0) {
     return (
       <div className={styles.wrapper}>
@@ -15,11 +15,15 @@ export default function CharacterList({ res }) {
         <h1>Available Characters</h1>
         <div>
           {res.map((char, index) => {
+            const charIcon = res[index];
+            console.log(charIcon)
+            //const charIcon = res[char].name.toLowerCase();
             return (
               <>
               <div>
                 <button className={styles.wrapper}>
                   <p key={index}>{char}</p>
+                  <Image src={`https://api.genshin.dev/characters/${charIcon}/icon-big`} alt='character icons' width={100} height={100}/>
                 </button>
               </div>
               </>
