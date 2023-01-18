@@ -5,3 +5,16 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.genshin.dev',
+        port: '',
+        pathname: '/characters/**',
+      },
+    ],
+  },
+}
