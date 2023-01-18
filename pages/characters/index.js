@@ -17,7 +17,9 @@ export default function CharacterList({res}) {
                 {res.map((char,index) => {
                     return (
                         <>
+                        <button>
                         <p key={index}>{char}</p>
+                        </button>
                         </>
                     )
                 })}
